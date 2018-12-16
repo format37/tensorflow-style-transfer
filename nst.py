@@ -108,7 +108,7 @@ def download_file(url,local_filename):
 				f.write(chunk)
 
 def mySqlQuery(query):
-	db = MySQLdb.connect(host="74.220.207.151", user="scriptl1_tgbot", passwd="790th790th", db="scriptl1_wp_e3c7", charset='utf8')
+	db = MySQLdb.connect(host="host", user="user", passwd="pass", db="db", charset='utf8')
 	cursor = db.cursor()
 	cursor.execute(query) 
 	data =  cursor.fetchall()
@@ -200,7 +200,7 @@ def main():
 	if len(data):
 		
 		#init
-		token 		= '672059230:AAFmFSgN8j0lC_--lJimimmL6vvb7Cy_684'
+		token 		= 'pasteTokenThere'
 		messageUrl	= 'http://scriptlab.net/telegram/bots/relaybot/relaylocked.php?token='+token+'&chat='+user+'&text='
 		result		= 'photos/'+str(uuid.uuid4())+'.jpg'
 		
