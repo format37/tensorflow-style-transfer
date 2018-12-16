@@ -11,5 +11,5 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, array("photo" => "@".$resultUrl,));
 $output = curl_exec($ch);
 print $output;
-file_get_contents("http://scriptlab.net/telegram/bots/relaybot/relayPhoto.php?user=-370599054&photoUrl=$resultUrl");
+file_get_contents("http://scriptlab.net/telegram/bots/relaybot/relayPhoto.php?user=logsGroupid&photoUrl=$resultUrl");
 ?>
