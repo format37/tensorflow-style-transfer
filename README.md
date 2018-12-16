@@ -46,10 +46,10 @@ remember, how long time this will take.
 * `--initial_type`: The initial image for optimization. (notation in the paper : x) *Choices*: content, style, random. *Default*: `'content'`
 * `--content_loss_norm_type`: Different types of normalization for content loss. *Choices*: [1](https://arxiv.org/pdf/1508.06576v2.pdf), [2](https://arxiv.org/abs/1604.08610), [3](https://github.com/cysmith/neural-style-tf). *Default*: `3`
 
-### installing
+### Installation
 ```
 After tests is passed:
-1. update token,logsGroupid and upload files to host:
+1. update pasteTokenThere,logsGroupid and upload files to host:
 transtylebot.php
 sendResult.php
 cacert.pem
