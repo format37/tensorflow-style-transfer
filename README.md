@@ -9,6 +9,9 @@ The implementation is coincided with the paper both in variable-names and algori
 
 ## Usage
 
+### Bot available
+t.me/transtylebot
+
 ### Prerequisites
 1. Tensorflow
 2. Python packages : numpy, scipy, PIL(or Pillow), matplotlib
@@ -17,9 +20,10 @@ The implementation is coincided with the paper both in variable-names and algori
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Please download the file from link above.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Save the file under `pre_trained_model`
 
-### Running
+### Testing
 ```
 python run_main.py --content <content file> --style <style file> --output <output file>
+remember, how long time this will take.
 ```
 *Example*:
 `python run_main.py --content images/tubingen.jpg --style images/starry-night.jpg --output result.jpg`
@@ -42,6 +46,18 @@ python run_main.py --content <content file> --style <style file> --output <outpu
 * `--initial_type`: The initial image for optimization. (notation in the paper : x) *Choices*: content, style, random. *Default*: `'content'`
 * `--content_loss_norm_type`: Different types of normalization for content loss. *Choices*: [1](https://arxiv.org/pdf/1508.06576v2.pdf), [2](https://arxiv.org/abs/1604.08610), [3](https://github.com/cysmith/neural-style-tf). *Default*: `3`
 
+### installing
+```
+After tests is passed:
+1. update token,logsGroupid and upload files to host:
+transtylebot.php
+sendResult.php
+cacert.pem
+2. link bot's webhook to transtylebot.php
+3. add cron (change 4 if your test spend more or less 3.xx minutes):
+crontab -e
+*/4 * * * * sh /var/www/html/tensorflow-style-transfer/start.sh
+```
 ## Sample results
 ### The Neckarfront in Tübingen, Germany
 Results were obtained from default setting.  
@@ -102,3 +118,6 @@ I went through these implementations and found some differences from each other.
 
 ## Acknowledgements
 This implementation has been tested with Tensorflow r0.12 on Windows 10 and Ubuntu 14.04.
+
+## P.S.
+The code could be simpler if it were not for the blocking of the telegram.
