@@ -4,10 +4,10 @@ define("TOKEN",     "pasteTokenThere");
 
 function Query($query)
 {
-	$host	= "localhost";
-	$user	= "scriptl1_tgbot";
-	$pwd	= "790th790th";
-	$dbase	= "scriptl1_wp_e3c7";
+	$host	= "host";
+	$user	= "user";
+	$pwd	= "pass";
+	$dbase	= "dbase";
 	$answerLine	= "";
 	$answer= array();
 	$link = mysqli_connect($host, $user, $pwd, $dbase);
